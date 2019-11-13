@@ -149,9 +149,9 @@ public class MainActivity extends AppCompatActivity {
         String filename = null;
         for (int i = count; i <= advertnum; i++) {
             filename = advertPath + result[count];
-            if (filename.indexOf(".jpg") > 0) {
-                break;
-            }
+            //if (filename.indexOf(".jpg") > 0) {
+            //    break;
+            //}
             count++;
         }
         //获取图片源
@@ -241,7 +241,10 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < filesOrDirs.length; i++) {
                 if (!filesOrDirs[i].isDirectory()) {//如果不是文件夹,说明是文件
                     String strPicName = filesOrDirs[i].getName();
-                    if (strPicName.indexOf(".jpg") > 0) {
+                    if (strPicName.indexOf(".jpg") > 0
+                        || strPicName.indexOf(".png") > 0
+                        || strPicName.indexOf(".jpeg") > 0
+                        || strPicName.indexOf(".bmp") > 0) {
                         result[number] = strPicName; //把文件名存储在String[]中
                         advertnum++;
                         number++;
@@ -346,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
                 showToast("U盘移出异常！");
                 //Toast.makeText(getApplicationContext(), "U盘移出异常！",Toast.LENGTH_SHORT).show();
             } else {
-                showToast("开始读取配置444444");
+                showToast("开始读取配置......");
             }
         }
     }
