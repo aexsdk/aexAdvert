@@ -1,4 +1,18 @@
 package com.androidex.apps.aexadvert;
+/*****
+ * **
+ * 广告媒体播放工具
+ *    在U盘上放一个文件advert.ini
+ *        [config]
+ *        seconds=10        #表示多少秒切换一次
+ *    advertpic目录下存放要播放的广告图片。
+ *    出入U盘后会自动复制文件到设备上，然后自动开始播放。
+ *
+ *    
+ * 安卓工控设备有限公司
+ * 深圳市龙岗区坂田龙景工业园E栋二楼东
+ * 西安市高新区锦业一路中投国际B1404
+ */
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
