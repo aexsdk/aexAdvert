@@ -146,14 +146,15 @@ public class MainActivity extends AppCompatActivity {
         if (count >= advertnum || count < 0) {
             count = 0;
         }
-        String filename = null;
-        for (int i = count; i <= advertnum; i++) {
+        String filename = advertPath + result[count];
+        /*for (int i = count; i <= advertnum; i++) {
             filename = advertPath + result[count];
             //if (filename.indexOf(".jpg") > 0) {
             //    break;
             //}
             count++;
         }
+         */
         //获取图片源
         WindowManager wm = this.getWindowManager();
         int width = wm.getDefaultDisplay().getWidth();
